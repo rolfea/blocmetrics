@@ -7,6 +7,8 @@
 <% end %>
 
 <h3>Application Events</h3>
-<% @events.each do |event| %>
-  <%= event  %> 
+
+<% @events.each_key do |key| %>
+  <p><%= key %>
+  <%= @events[key].count %></p>
 <% end %>

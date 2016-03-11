@@ -18,9 +18,10 @@ users = User.all
 end
 registered_applications = RegisteredApplication.all
 
+events_samples = ["closed", "opened", "purchased", "refunded"]
 60.times do
   Event.create!(
-    name: Faker::Hipster.word,
+    name: events_samples.sample,
     registered_application_id: rand(1..30)
   )
 end
