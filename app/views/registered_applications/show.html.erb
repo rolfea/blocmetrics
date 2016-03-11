@@ -5,3 +5,8 @@
   <%= link_to "Edit", edit_registered_application_path, class: 'btn btn-success' %>
   <%= link_to "Delete", @registered_application, method: :delete, class: 'btn btn-danger', data: {confirm: "Are you sure you want to delete this?" } %>
 <% end %>
+
+<h3>Application Events</h3>
+<% @events.each do |event| %>
+  <%= event  %> 
+<% end %>
