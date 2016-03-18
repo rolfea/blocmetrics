@@ -1,3 +1,4 @@
+<%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
 <h3><%= @registered_application.name %></h3>
 <%= link_to @registered_application.URL %>
 
@@ -8,7 +9,5 @@
 
 <h3>Application Events</h3>
 
-<% @events.each_key do |key| %>
-  <p><%= key %>
-  <%= @events[key].count %></p>
-<% end %>
+
+<%= pie_chart @registered_application.events.group(:name).count %>
